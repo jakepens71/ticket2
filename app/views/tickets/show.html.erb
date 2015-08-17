@@ -1,28 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div style="text-align:center">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @ticket.title %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%= @ticket.title %>
+	</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @ticket.body %>
-</p>
+	<p>
+	  <strong>Body:</strong>
+	  <%= @ticket.body %>
+	</p>
 
-<p>
-  <strong>Severity:</strong>
-  <%= @ticket.level %>
-</p>
+	<p>
+	  <strong>Severity:</strong>
+	  <%= @ticket.level %>
+	</p>
 
-<p>
-  <strong>Ticket Owner:</strong>
-  <% if @ticket.user == nil %>
+	<p>
+	  <strong>Ticket Owner:</strong>
+	  <% if @ticket.user == nil %>
 
-  <% else %>
-  	<%= @ticket.user.name %>
-  <% end %>
-</p>
+	  <% else %>
+	  	<%= @ticket.user.name %>
+	  <% end %>
+	</p>
 
-<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
-<%= link_to 'Back', tickets_path %>
+	<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+	<%= link_to 'Back', tickets_path %>
+</div>

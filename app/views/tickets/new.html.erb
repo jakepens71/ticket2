@@ -1,7 +1,9 @@
 <%= javascript_include_tag "tickets.js" %>
 
-<h1>New Ticket</h1>
+    <div style="text-align:center">
+	<h1>New Ticket</h1>
+    </div>
+	<%= render 'form' %>
 
-<%= render 'form' %>
+	<%= link_to 'Back', tickets_path %>
 
-<%= link_to 'Back', tickets_path %>

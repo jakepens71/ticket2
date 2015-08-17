@@ -4,3 +4,21 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+textarea {
+	min-width: 500px;
+	min-height: 300px;
+}
+
+.textfield {
+	min-width: 500px;
+	min-height: 50x;
+}
+
+#ticket_assigned_to {
+	min-width: 500px;
+}
+
+#ticket_level {
+	min-width: 500px;
+}
