@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  
-  resources :tickets do
-	collection do
-		get :getAdmins
-  	end
-  end
+
 
   devise_for :admins
-  devise_for :users, controllers: { registrations: "registrations" }
+  devise_for :users
 
+  resources :tickets do
+  collection do
+    get :getAdmins
+    end
+  end
 
 
   root 'pages#index'
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 		get :admin
 		get :getAllUsers
 		get :index
+    get :getTotalTickets
   	end
   end
 

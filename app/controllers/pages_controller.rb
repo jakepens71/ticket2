@@ -1,6 +1,14 @@
 class PagesController < ApplicationController
 
 	
+	def getTotalTickets
+		@totalTickets = Ticket.where('status = ?', 'f').count
+
+		respond_to do |format|
+			format.json { render json: {:tickets => @totalTickets } }
+		end
+
+	end
 
 
 	def getAllUsers

@@ -1,3 +1,8 @@
+<%= javascript_include_tag '//code.highcharts.com/highcharts.js' %>
+<%= javascript_include_tag '//code.highcharts.com/highcharts-more.js' %>
+<%= javascript_include_tag '//code.highcharts.com/modules/exporting.js' %>
+<%= javascript_include_tag 'pages.js' %>
+
 <% if !user_signed_in? %>
 	<% content_for :top_content do %>
 	  <div class="jumbotron" class="center">
@@ -12,5 +17,5 @@
 	  </div>
 	<% end %>
 <% else %>
-	Welcome Back! <%= current_user.name %>
+	<div id="container" style="width:100%; height:400px;"></div>
 <% end %>
