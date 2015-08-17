@@ -19,7 +19,7 @@ $(document).ready(function()
 		        },
 
 		        title: {
-		            text: 'Speedometer'
+		            text: 'Total Tickets'
 		        },
 
 		        pane: {
@@ -94,10 +94,10 @@ $(document).ready(function()
 		        },
 
 		        series: [{
-		            name: 'Speed',
+		            name: 'tickets',
 		            data: [data.tickets],
 		            tooltip: {
-		                valueSuffix: ' km/h'
+		                //valueSuffix: ' tickets'
 		            }
 		        }]
 
