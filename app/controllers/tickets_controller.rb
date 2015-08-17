@@ -87,7 +87,7 @@ class TicketsController < ApplicationController
 	puts @admins
 
 	respond_to do |format|
-		format.json { render json: { 'admins': @admins } }
+		format.json { render json: { :admins => @admins } }
 	end	
   end
 
