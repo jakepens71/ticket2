@@ -95,7 +95,7 @@ $(document).ready(function()
 
 		        series: [{
 		            name: 'Speed',
-		            data: data.tickets.length,
+		            data: [data.tickets],
 		            tooltip: {
 		                valueSuffix: ' km/h'
 		            }
