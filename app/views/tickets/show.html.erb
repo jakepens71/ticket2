@@ -17,7 +17,11 @@
 
 <p>
   <strong>Ticket Owner:</strong>
-  <%= @ticket.user.name %>
+  <% if @ticket.user == nil %>
+
+  <% else %>
+  	<%= @ticket.user.name %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |
