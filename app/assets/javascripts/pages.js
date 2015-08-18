@@ -76,7 +76,7 @@ $(document).ready(function()
 		                rotation: 'auto'
 		            },
 		            title: {
-		                text: 'km/h'
+		                text: 'tickets'
 		            },
 		            plotBands: [{
 		                from: 0,
