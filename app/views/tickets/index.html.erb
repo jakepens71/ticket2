@@ -28,6 +28,8 @@
 
 		<% if current_user.admin? %>
 			<td><%= best_in_place ticket, :status, as: :select, :collection => {"f" => "False", "t" => "True" }, :selected => "False" %></td>
+		<% else %>
+			<td> <%= ticket.status %></td>
 		<% end %>		
 		<td><%= link_to 'Show', ticket %></td>
 		<td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
