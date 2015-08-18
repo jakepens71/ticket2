@@ -5,13 +5,14 @@ class TicketsController < ApplicationController
   # GET /tickets.json
   def index
    if current_user.admin?
-	@user = current_user.id
-	@tickets = Ticket.where("status = ? and (user_id = ? or user_id is ?)", "false", @user, nil).all
+	user = current_user.id
+	#@tickets = Ticket.where("status = ? and (user_id = ? or user_id is ?)", "false", @user, nil).all
+	@tickets = Ticket.find_by_sql("SELECT distinct Tickets.id, Tickets.title, Tickets.body, Tickets.level, Tickets.status, Users.name FROM Tickets LEFT JOIN Users on Tickets.assigned_to = Users.id where (Tickets.assigned_to = #{user} or Tickets.assigned_to IS NULL) and Tickets.status = 'f'")
    end
 
    if !current_user.admin?
-	    @user = current_user.id
-	    @tickets = Ticket.where("status = ? and created_id = ?", "false", @user).all
+	    user = current_user.id
+		@tickets = Ticket.find_by_sql("SELECT distinct Tickets.id, Tickets.title, Tickets.body, Tickets.level, Tickets.status, Users.name FROM Tickets LEFT JOIN Users on Tickets.assigned_to = Users.id where Tickets.created_id = #{user} and status = 'f'")
    end
   end
 

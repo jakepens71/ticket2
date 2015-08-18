@@ -23,11 +23,9 @@
 		<td><%= ticket.title %></td>
 		<td><%= ticket.body %></td>
 		<td><%= ticket.level %></td>
-		<% if ticket.user == nil %>
-			<td><%= %></td>
-		<% else %>
-			<td><%= ticket.user.name %></td>
-		<% end %>
+		
+		<td><%= ticket.name %></td>
+
 		<% if current_user.admin? %>
 			<td><%= best_in_place ticket, :status, as: :select, :collection => {"f" => "False", "t" => "True" }, :selected => "False" %></td>
 		<% end %>		
