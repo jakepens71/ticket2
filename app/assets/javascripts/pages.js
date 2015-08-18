@@ -76,7 +76,7 @@ $(document).ready(function()
 		                rotation: 'auto'
 		            },
 		            title: {
-		                text: 'tickets'
+		                text: 'Tickets'
 		            },
 		            plotBands: [{
 		                from: 0,
