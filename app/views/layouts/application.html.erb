@@ -18,7 +18,8 @@
         <li><%= link_to 'Home', root_path %></li>
 	<% if user_signed_in? %>
 		<li><%= link_to "Tickets", tickets_path %></li>
-	<% end %>
+	  	<li><%= link_to "Bug Report", '/bugreport/submitReport' %></li>
+  	<% end %>
       </ul>
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>

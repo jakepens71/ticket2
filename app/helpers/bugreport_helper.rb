@@ -1,0 +1,2 @@
+module BugreportHelper
+end

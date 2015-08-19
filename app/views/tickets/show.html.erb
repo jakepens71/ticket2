@@ -18,10 +18,10 @@
 
 	<p>
 	  <strong>Ticket Owner:</strong>
-	  <% if @ticket.user == nil %>
-
+	  <% if @ticket == nil %>
+		<% @ticket.name %>
 	  <% else %>
-	  	<%= @ticket.user.name %>
+	  	
 	  <% end %>
 	</p>
 

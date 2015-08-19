@@ -1,0 +1,24 @@
+<%= form_tag :controller => 'bugreport', :action => 'submitReport' do %>
+	<div>
+		 Title
+		<br />
+		<%= text_field :bugTitle, params[:bugTitle] %>
+	</div>
+
+	<div>
+		Body
+		<br />
+		<%= text_area :bugBody, params[:bugBody] %>
+	</div>
+
+	<div class="hidden">
+		By
+		<br />
+		<%= text_field :currentUser, params[:currentUser], :value => current_user.name %>
+	</div>
+
+	<div>
+		<%= submit_tag "Submit Bug Report", :id => "submit" %>
+	</div>
+
+<% end %>

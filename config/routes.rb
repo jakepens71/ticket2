@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :bugreport do
+    collection do
+      get :submitReport
+      post :submitReport
+    end
+  end
 
   devise_for :admins
   devise_for :users
@@ -9,7 +15,6 @@ Rails.application.routes.draw do
     get :getAdmins
     end
   end
-
 
   root 'pages#index'
 
