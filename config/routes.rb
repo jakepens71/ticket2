@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :feedbacks
   resources :bugreport do
     collection do
       get :submitReport
