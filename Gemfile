@@ -19,6 +19,8 @@ gem 'bootstrap-sass'
 gem 'squeel'
 gem 'best_in_place', '~> 3.0.1'
 gem 'jquery-ui-rails'
+gem 'mail_form'
+gem 'simple_form'
 
 #Used for Heroku
 gem 'rails_12factor', group: :production
