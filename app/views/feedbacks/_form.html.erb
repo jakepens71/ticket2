@@ -1,6 +1,6 @@
 <%= form_for(@feedback) do |f| %>
   <% if @feedback.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" >
       <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
 
       <ul>
@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div style="text-align: center; min-height:300px" id="feedbackBody">
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_area :body %>
   </div>
-  <div class="actions">
+  <div class="actions" style="text-align: center">
     <%= f.submit %>
   </div>
 <% end %>
